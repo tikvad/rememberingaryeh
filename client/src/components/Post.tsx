@@ -34,7 +34,7 @@ const Post: React.FC<PostProps> = ({ name, date, text, image }) => {
 
     return (
         <div className="postContainer">
-            <img style={{ height: "30vh" }} src={image} />
+            <img className="postFile" src={image} />
             <div className="textContainer">
                 <div className="name">{name}</div>
                 <div className="date">{formatDateToDDMMYYYY(date)}</div>

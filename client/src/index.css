@@ -79,6 +79,7 @@ button:focus-visible {
   float: right;
   color: #000000;
   padding: 0 6vw 0 5vw;
+  direction: rtl;
 }
 
 .headline h2 {

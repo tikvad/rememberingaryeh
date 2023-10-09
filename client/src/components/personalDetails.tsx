@@ -1,10 +1,9 @@
+import Title from "./Title"
+
 export default function PersonalDetails() {
     return (
     <div>
-    <div className="headline">
-    <h2>אריה צירינג</h2>
-    <hr id="headlineHr"/>
-    </div>
+        <Title text="אריה צירינג" />
     </div>
     )
 }
