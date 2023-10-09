@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom"
 import { MainPage } from "./pages/MainPage"
 import { AddNewPostPage } from "./pages/AddNewPostPage"
@@ -22,7 +22,10 @@ function App() {
   ]);
 
   return (
-    <RouterProvider router={router} />
+    <div>
+
+      <RouterProvider router={router} />
+    </div>
   )
 }
 

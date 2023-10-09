@@ -1,0 +1,30 @@
+.topBarContainer {
+    color: white;
+    background-color: #186B89;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 5vw 0 5vw;
+    align-items: center;
+}
+.empty{
+    padding: 0.5vh 1.5vh 0.5vh 1.5vh;
+}
+
+.addButton {
+    padding: 0.5vh 1.5vh 0.5vh 1.5vh;
+    background-color: white;
+    color: #186B89;
+    border-radius: 20px;
+}
+
+.addButton:hover {
+    cursor: pointer;
+    background-color: rgb(223, 223, 223);
+
+}
+
+.title {
+    font-size: 4vh;
+    line-height: 10vh;
+}

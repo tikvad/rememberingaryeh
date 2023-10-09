@@ -69,17 +69,18 @@ button:focus-visible {
 }
 
 #headlineHr {
-  width: 85px;
+  width: 7vw;
   margin-right: 0;
   margin-top: 0;
-  border: 1.3px solid #186B89;
+  border: 0.2vh solid #186B89;
 }
 
 .headline {
   float: right;
   color: #000000;
+  padding: 0 6vw 0 5vw;
 }
 
 .headline h2 {
-  margin-bottom: 5px;
+  margin-bottom: 0.7vh;
 }
