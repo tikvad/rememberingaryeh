@@ -2,6 +2,7 @@ import Post from "../components/Post";
 import Slider from "../components/Slider";
 import 'swiper/scss';
 import "../styles/mainPage.scss";
+import TopBar from "../components/TopBar";
 
 let posts = [
     {
@@ -14,6 +15,7 @@ let posts = [
 ]
 export function MainPage() {
     return <div>
+        <TopBar button={true} />
         <Slider />
         <div className="postsContainer">
             {posts.map(({ name, date, text, image }) => <Post name={name} date={date} text={text} image={image} />)}
