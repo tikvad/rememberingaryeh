@@ -11,6 +11,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+.env*
+*.env
+.env.development
+
 
 # OS
 .DS_Store
@@ -35,4 +39,3 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-.env.development
