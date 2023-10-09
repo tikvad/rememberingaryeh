@@ -1,3 +1,6 @@
+import Slider from "../components/Slider";
+import 'swiper/scss';
+
 export function MainPage() {
-    return <div>Main Page</div>
+    return <div><Slider/></div>
 }
