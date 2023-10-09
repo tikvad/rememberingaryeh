@@ -23,6 +23,8 @@
             margin-right: 2.5vw;
         }
         .slider-element {
+            cursor: pointer;
+            transition: 0.5s;
             height: 40vh;
             max-width: 15vw;
             display: flex;
@@ -31,9 +33,14 @@
             border: 1px solid #707070;
             border-radius: 15px;
             overflow: hidden;
+            position: relative;
+            &:hover {
+                filter: brightness(0.8);
+            }
             img, video {
-                max-width: fit-content;
-                max-height: fit-content;
+                position: relative;
+                max-height: 100%;
+                max-width: auto;
                 min-width: 70px;
             }
         }
@@ -56,17 +63,6 @@
             .slider-element {
                 height: 20vh;
                 max-width: 15vw;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: 1px solid #707070;
-                border-radius: 15px;
-                overflow: hidden;
-                img, video {
-                    max-width: fit-content;
-                    max-height: fit-content;
-                    min-width: 70px;
-                }
             }
         }
     }
