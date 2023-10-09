@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -64,19 +64,19 @@ const Slider: React.FC = () => {
     <div className='slider-container'>
         <Swiper
             // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={30}
+            modules={[Navigation]}
+            spaceBetween={'3vw'}
             slidesPerView={4}
             navigation
             centerInsufficientSlides
             dir='rtl'
         >
-                {(elements || []).map((item) => (
-                    <SwiperSlide key={item.url}>
-                        <SliderElement {...item}></SliderElement>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            {(elements || []).map((item) => (
+                <SwiperSlide key={item.url}>
+                    <SliderElement {...item}></SliderElement>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     </div>
   );
 };
