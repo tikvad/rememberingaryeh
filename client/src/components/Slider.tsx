@@ -15,7 +15,8 @@ import SliderElement from './SliderElement';
 import SliderElementProps from '../common/interfaces/SliderElementProps';
 import PostPopup from './PostPopup';
 
-const mobileSize = 768;
+const mobileSize = 600;
+const tabletSize = 900;
 const Slider: React.FC = () => {
 
     const [currentPost, setCurrentPost] = useState<string | null>(null);
@@ -106,7 +107,7 @@ const Slider: React.FC = () => {
                     // install Swiper modules
                     modules={[Navigation]}
                     spaceBetween={'3vw'}
-                    slidesPerView={width <= mobileSize ? 1 : 4}
+                    slidesPerView={width <= tabletSize ? (width <= mobileSize ? 1 : 2) : 4}
                     navigation
                     centerInsufficientSlides
                     dir='rtl'
