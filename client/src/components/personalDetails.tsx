@@ -18,6 +18,7 @@ export default function PersonalDetails() {
                     <img className="image" src="ariyeh.jpg" />
                     <div className="detailsText">
                         {text}
+                        <div><b>האתר עוד בבניה<br /> בקרוב תוכלו להעלות זכרונות / תמונות / סירטונים / סיפורים שלכם עם אריה</b></div>
                     </div>
                 </div>
             </div>
