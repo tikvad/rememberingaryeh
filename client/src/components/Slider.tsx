@@ -1,7 +1,7 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,60 +13,90 @@ import 'swiper/css/scrollbar';
 
 import SliderElement from './SliderElement';
 import SliderElementProps from '../common/interfaces/SliderElementProps';
+import PostPopup from './PostPopup';
 
 const Slider: React.FC = () => {
+
+  const [currentPost, setCurrentPost] = useState<string | null>(null);
+
+  const onChoosePost = (url: string) => {
+      setCurrentPost(url);
+  }
+
+  useEffect(() => {
+      return () => setCurrentPost(null);
+  }, []);
+    
   const elements:Array<SliderElementProps> = useMemo(() => {
     return [
         {
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlJTIwZmxvd2VyfGVufDB8fDB8fHww&w=1000&q=80',
-            text: 'פרח'
+            url: 'https://drive.google.com/uc?export=view&id=1cGe9oExhwqKvxJ_QcW9BMV5a6tSI5dcx',
+            text: 'תמונה1'
         },
         {
             type: 'image',
-            url: 'https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?w=2000',
-            text: 'פרח'
+            url: 'https://drive.google.com/uc?export=view&id=17OQ-b4t6-2dM8p-UMPFt6OTPfbGNs_Fh',
+            text: 'תמונה2'
         },
         {
             type: 'image',
-            url: 'https://nationaltoday.com/wp-content/uploads/2022/07/6-National-Flower-Day.jpg',
-            text: 'פרח'
+            url: 'https://drive.google.com/uc?export=view&id=1E9l1Cu0XHLhmIHS4QKXTpXSCKjr6Oz2V',
+            text: 'תמונה3'
         },
         {
             type: 'image',
-            url: 'https://c8.alamy.com/comp/TACMXH/three-red-rose-flower-buds-and-petals-from-a-vase-TACMXH.jpg',
-            text: 'פרח'
+            url: 'https://drive.google.com/uc?export=view&id=1kNoGYYTgAnHrSlIDQUJdcatL5bjfWnmj',
+            text: 'תמונה4'
         },
         {
             type: 'image',
-            url: 'https://img.freepik.com/free-photo/closeup-shot-purple-flower_181624-25863.jpg?w=2000',
-            text: 'פרח'
+            url: 'https://drive.google.com/uc?export=view&id=1MhG3FB__odUmrBVpU2Y4lHAbybtV1T7p',
+            text: 'תמונה5'
         },
         {
             type: 'image',
-            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRfALSiw8zsjDozcadnSFXDYjqULSEwjgnjw&usqp=CAU',
-            text: 'פרח'
+            url: 'https://drive.google.com/uc?export=view&id=1yW08kx0EQlALVSOItoSOzd7dWfXea1cz',
+            text: 'תמונה6'
         },
-    ];
+        {
+            type: 'image',
+            url: 'https://drive.google.com/uc?export=view&id=1uleiqaRJ-UnAdWuZEkeVUeNcdoddyCSz',
+            text: 'תמונה8'
+        },
+        {
+            type: 'image',
+            url: 'https://drive.google.com/uc?export=view&id=15u2lrOwa8JuK0kLMsl2MVDReBEjsqWZg',
+            text: 'תמונה9'
+        }
+
+    ].map(item => {
+            return {...item, onChoosePost}
+        }
+    ) as Array<SliderElementProps>;
   }, []);
+
   return (
-    <div className='slider-container'>
-        <Swiper
-            // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={30}
-            slidesPerView={4}
-            navigation
-            centerInsufficientSlides
-            dir='rtl'
-        >
+    <>
+        <div className='slider-container'>
+            <Swiper
+                // install Swiper modules
+                modules={[Navigation]}
+                spaceBetween={'3vw'}
+                slidesPerView={4}
+                navigation
+                centerInsufficientSlides
+                dir='rtl'
+            >
                 {(elements || []).map((item) => (
                     <SwiperSlide key={item.url}>
-                        <SliderElement {...item}></SliderElement>
+                        <SliderElement {...item} onChoosePost={(url: string) => onChoosePost(url)}></SliderElement>
                     </SwiperSlide>
                 ))}
             </Swiper>
-    </div>
+        </div>
+        <PostPopup open={!!currentPost} post={elements.find(item => item.url === currentPost)} onClose={() => setCurrentPost(null)}/>
+    </>
   );
 };
 

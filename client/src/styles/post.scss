@@ -1,0 +1,23 @@
+.postContainer {
+    width: 90vw;
+    // height: 30vh;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.textContainer {
+    text-align: -webkit-right;
+
+}
+
+.date {
+    font-size: 12px;
+}
+
+.readMore {
+    color: '#186b89';
+    font-weight: 'bold';
+    width: 'fit-content';
+    cursor: "pointer";
+}
