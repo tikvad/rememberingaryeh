@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom"
 import { MainPage } from "./pages/MainPage"
 import { AddNewPostPage } from "./pages/AddNewPostPage"
-import TopBar from "./components/TopBar";
 import './App.scss'
 
 function App() {
@@ -24,7 +23,7 @@ function App() {
 
   return (
     <div>
-      <TopBar button={false} />
+
       <RouterProvider router={router} />
     </div>
   )
