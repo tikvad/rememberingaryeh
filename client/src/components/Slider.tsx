@@ -44,32 +44,32 @@ const Slider: React.FC = () => {
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=1E9l1Cu0XHLhmIHS4QKXTpXSCKjr6Oz2V',
-            text: 'תמונה3'
+            text: undefined
         },
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=1kNoGYYTgAnHrSlIDQUJdcatL5bjfWnmj',
-            text: 'תמונה4'
+            text: undefined
         },
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=1MhG3FB__odUmrBVpU2Y4lHAbybtV1T7p',
-            text: 'תמונה5'
+            text: undefined
         },
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=1yW08kx0EQlALVSOItoSOzd7dWfXea1cz',
-            text: 'תמונה6'
+            text: undefined
         },
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=1uleiqaRJ-UnAdWuZEkeVUeNcdoddyCSz',
-            text: 'תמונה8'
+            text: undefined
         },
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=15u2lrOwa8JuK0kLMsl2MVDReBEjsqWZg',
-            text: 'תמונה9'
+            text: undefined
         },
         {
             type: 'image',

@@ -16,7 +16,7 @@ const PostPopup: React.FC<PostPopupProps> = ({ open, post, onClose }) => {
                     <button onClick={onClose}>×</button>
                 </div>
                 <div className="popup-body">
-                    {!post?.url ? <Skeleton className="popup-skeleton" /> : post?.type === "image" ? <img src={post.url} alt={post.text || ""} /> : <video src={post?.url || ""}/>}
+                    {!post?.url ? <Skeleton className="popup-skeleton" /> : post?.type === "image" ? <img src={post.url} className="popup-img" alt={post.text || ""} /> : <video src={post?.url || ""} className="popup-video"/>}
                     {post?.text ? <p dir="auto" className="popup-text">{post?.text}</p> : undefined}
                 </div>
             </div>
