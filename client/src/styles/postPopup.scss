@@ -19,10 +19,10 @@
     }
     .popup-body {
         align-self: center;
-        width: 80%;
+        width: 100%;
         height: 80vh;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         position: relative;
         img, video {
             align-self: center;

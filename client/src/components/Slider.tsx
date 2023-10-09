@@ -32,12 +32,12 @@ const Slider: React.FC = () => {
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=1cGe9oExhwqKvxJ_QcW9BMV5a6tSI5dcx',
-            text: 'תמונה1'
+            text: undefined
         },
         {
             type: 'image',
             url: 'https://drive.google.com/uc?export=view&id=17OQ-b4t6-2dM8p-UMPFt6OTPfbGNs_Fh',
-            text: 'תמונה2'
+            text: 'חדשות רעננה מהשטח'
         },
         {
             type: 'image',

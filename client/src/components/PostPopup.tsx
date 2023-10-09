@@ -17,7 +17,7 @@ const PostPopup: React.FC<PostPopupProps> = ({ open, post, onClose }) => {
                 </div>
                 <div className="popup-body">
                     {!post?.url ? <Skeleton className="popup-skeleton" /> : post?.type === "image" ? <img src={post.url} alt={post.text || ""} /> : <video src={post?.url || ""}/>}
-                    <p dir="auto" className="popup-text">{post?.text}</p>
+                    {post?.text ? <p dir="auto" className="popup-text">{post?.text}</p> : undefined}
                 </div>
             </div>
         </Modal>
