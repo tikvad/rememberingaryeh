@@ -1,6 +1,6 @@
 .postContainer {
     width: 90vw;
-    height: 30vh;
+    // height: 30vh;
     overflow: hidden;
     display: flex;
 
@@ -8,5 +8,12 @@
 
 
 .date {
-    font-size: 2vh;
+    font-size: 12px;
+}
+
+.readMore {
+    color: '#186b89';
+    font-weight: 'bold';
+    width: 'fit-content';
+    cursor: "pointer";
 }
