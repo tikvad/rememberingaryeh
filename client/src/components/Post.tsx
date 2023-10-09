@@ -42,7 +42,7 @@ const Post: React.FC<PostProps> = ({ name, date, text, image }) => {
                 <div style={divStyle} className="text">{text}</div>
 
                 {text.length > maxHeight + 5 && (
-                    <div style={{ color: '#186b89', fontWeight: 'bold', width: 'fit-content', cursor: "pointer" }} onClick={toggleText}>{showFullText ? "קרא פחות" : "קרא עוד"}</div>
+                    <div className="read-more" onClick={toggleText}>{showFullText ? "קרא פחות" : "קרא עוד"}</div>
                 )}
             </div>
         </div>

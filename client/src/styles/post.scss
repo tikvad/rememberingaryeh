@@ -3,6 +3,7 @@
     align-self: center;
     overflow: hidden;
     display: flex;
+    white-space: pre-wrap;
     border-bottom: solid #707070 1px;
     padding: 2vh 2vw;
 }
@@ -20,9 +21,44 @@
     padding-bottom: 1vh;
 }
 
+.textContainer {
+    display: flex;
+    flex-direction: column;
+
+    .read-more {
+        color: #186b89;
+        font-weight: bold;
+        width: fit-content;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+
+    .name {
+        font-weight: 500;
+    }
+}
+
 .readMore {
     color: '#186b89';
     font-weight: 'bold';
     width: 'fit-content';
     cursor: "pointer";
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .postContainer {
+        flex-direction: column;
+    }
+
+    .postFile {
+        width: 70%;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .postFile {
+        width: 80%;
+    }
 }
