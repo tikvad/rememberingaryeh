@@ -5,6 +5,7 @@ import PersonalDetails from "../components/personalDetails";
 import 'swiper/scss';
 import "../styles/mainPage.scss";
 import TopBar from "../components/TopBar";
+import Footer from "../components/Footer"
 
 let posts = [
     {
@@ -24,5 +25,6 @@ export function MainPage() {
             <Title text="חברים ומשפחה משתפים" />
             {posts.map(({ name, date, text, image }, i) => <Post key={i} name={name} date={date} text={text} image={image} />)}
         </div>
+        <Footer />
     </div>
 }
