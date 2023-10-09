@@ -1,0 +1,12 @@
+.slider-element {
+    height: 400px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    img, video {
+        max-height: fit-content;
+        max-width: fit-content;
+        min-width: 100px;
+    }
+}
