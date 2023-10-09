@@ -1,13 +1,8 @@
 import "../styles/slider.scss";
-
-interface SliderElementProps {
-    type: 'image'|'video',
-    url: string,
-    text: string
-}
+import SliderElementProps from "../common/interfaces/SliderElementProps";
 
 const SliderElement: React.FC<SliderElementProps> = ({ type, url, text }) => {
-    return <div className="slider-element">
+    return <div className="slider-element" title={text}>
         {type === 'image' ? <img src={url} alt={text || ""} /> : <video src={url} />}
     </div>
 }
