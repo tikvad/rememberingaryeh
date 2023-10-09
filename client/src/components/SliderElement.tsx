@@ -1,4 +1,4 @@
-import "../style/slider.scss";
+import "../styles/slider.scss";
 
 interface SliderElementProps {
     type: 'image'|'video',
