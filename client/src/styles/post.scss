@@ -1,14 +1,23 @@
 .postContainer {
     width: 90vw;
-    // height: 30vh;
+    align-self: center;
     overflow: hidden;
     display: flex;
-
+    border-bottom: solid #707070 1px;
+    padding: 2vh 2vw;
 }
 
+.postFile {
+    width: 30%;
+    margin: 1%;
+    object-fit: contain;
+    align-self: flex-start;
+}
 
 .date {
     font-size: 12px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 .readMore {
