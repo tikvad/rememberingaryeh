@@ -67,3 +67,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#headlineHr {
+  width: 7vw;
+  margin-right: 0;
+  margin-top: 0;
+  border: 0.2vh solid #186B89;
+}
+
+.headline {
+  float: right;
+  color: #000000;
+  padding: 0 6vw 0 5vw;
+  direction: rtl;
+}
+
+.headline h2 {
+  margin-bottom: 0.7vh;
+}

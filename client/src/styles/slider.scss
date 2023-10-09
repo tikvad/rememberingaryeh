@@ -11,17 +11,20 @@
     overflow-x: hidden;
     left: 0;
     right: 0;
-    padding: 0 10vw;
+    padding: 5% 10vw;
     .swiper {
         .swiper-button-prev {
             right: var(--swiper-navigation-sides-offset, 0.2vw);
         }
+
         .swiper-button-next {
             left: var(--swiper-navigation-sides-offset, 0.2vw);
         }
+
         .swiper-slide-active {
             margin-right: 2.5vw;
         }
+
         .slider-element {
             cursor: pointer;
             transition: 0.5s;
@@ -34,10 +37,13 @@
             border-radius: 15px;
             overflow: hidden;
             position: relative;
+
             &:hover {
                 filter: brightness(0.8);
             }
-            img, video {
+
+            img,
+            video {
                 position: relative;
                 max-height: 100%;
                 max-width: auto;
@@ -50,19 +56,28 @@
 @media only screen and (max-width: 600px) {
     .slider-container {
         padding: 0 5vw;
+
         .swiper {
             .swiper-button-prev {
                 right: var(--swiper-navigation-sides-offset, 0);
             }
+
             .swiper-button-next {
                 left: var(--swiper-navigation-sides-offset, 0);
             }
+
             .swiper-slide-active {
                 margin-right: 2.5vw;
             }
+
             .slider-element {
-                height: 20vh;
-                max-width: 15vw;
+                height: 30vh;
+                max-width: 75vw;
+            }
+
+            .Swiper_Slide {
+                width: 100%;
+                padding-right: 5vw;
             }
         }
     }

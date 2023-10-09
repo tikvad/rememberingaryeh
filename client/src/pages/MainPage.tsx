@@ -1,5 +1,7 @@
 import Post from "../components/Post";
 import Slider from "../components/Slider";
+import Title from "../components/Title"
+import PersonalDetails from "../components/personalDetails";
 import 'swiper/scss';
 import "../styles/mainPage.scss";
 import TopBar from "../components/TopBar";
@@ -16,8 +18,10 @@ let posts = [
 export function MainPage() {
     return <div>
         <TopBar button={true} />
+        <PersonalDetails/>
         <Slider />
         <div className="postsContainer">
+            <Title text="חברים ומשפחה משתפים" />
             {posts.map(({ name, date, text, image }) => <Post name={name} date={date} text={text} image={image} />)}
         </div>
     </div>
