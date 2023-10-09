@@ -1,5 +1,5 @@
 interface SliderElementProps {
-    type: 'image'|'video',
+    type: 'image' | 'video',
     url: string,
     text: string,
     onChoosePost: (url: string) => void;

@@ -15,13 +15,27 @@ import SliderElement from './SliderElement';
 import SliderElementProps from '../common/interfaces/SliderElementProps';
 import PostPopup from './PostPopup';
 
+const mobileSize = 768;
 const Slider: React.FC = () => {
 
     const [currentPost, setCurrentPost] = useState<string | null>(null);
+    const [width, setWidth] = useState<number>(window.innerWidth);
 
     const onChoosePost = (url: string) => {
         setCurrentPost(url);
     }
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
 
     useEffect(() => {
         return () => setCurrentPost(null);
@@ -89,13 +103,13 @@ const Slider: React.FC = () => {
                     // install Swiper modules
                     modules={[Navigation]}
                     spaceBetween={'3vw'}
-                    slidesPerView={4}
+                    slidesPerView={width <= mobileSize ? 1 : 4}
                     navigation
                     centerInsufficientSlides
                     dir='rtl'
                 >
                     {(elements || []).map((item) => (
-                        <SwiperSlide key={item.url}>
+                        <SwiperSlide className='Swiper_Slide' key={item.url}>
                             <SliderElement {...item} onChoosePost={(url: string) => onChoosePost(url)}></SliderElement>
                         </SwiperSlide>
                     ))}
