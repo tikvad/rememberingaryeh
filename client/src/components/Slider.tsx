@@ -93,8 +93,7 @@ const Slider: React.FC = () => {
         return () => {
             window.removeEventListener('resize', handleWindowSizeChange);
         }
-    }, []);
-
+    })
 
     useEffect(() => {
         return () => setCurrentPost(null);

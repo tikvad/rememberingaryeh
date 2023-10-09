@@ -22,7 +22,7 @@ export function MainPage() {
         <Slider />
         <div className="postsContainer">
             <Title text="חברים ומשפחה משתפים" />
-            {posts.map(({ name, date, text, image }) => <Post name={name} date={date} text={text} image={image} />)}
+            {posts.map(({ name, date, text, image }, i) => <Post key={i} name={name} date={date} text={text} image={image} />)}
         </div>
     </div>
 }
