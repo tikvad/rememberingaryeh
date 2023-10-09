@@ -67,3 +67,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#headlineHr {
+  width: 85px;
+  margin-right: 0;
+  margin-top: 0;
+  border: 1.3px solid #186B89;
+}
+
+.headline {
+  float: right;
+  color: #000000;
+}
+
+.headline h2 {
+  margin-bottom: 5px;
+}
