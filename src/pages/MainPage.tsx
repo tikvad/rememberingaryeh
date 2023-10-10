@@ -18,7 +18,7 @@ let posts = [
 ]
 export function MainPage() {
     return <div>
-        <TopBar button={true} />
+        <TopBar />
         <PersonalDetails/>
         <Slider />
         <div className="postsContainer">
