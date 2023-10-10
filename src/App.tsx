@@ -8,7 +8,7 @@ import { AddNewPostPage } from "./pages/AddNewPostPage"
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   const router = createBrowserRouter([
     {

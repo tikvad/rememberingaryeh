@@ -1,13 +1,11 @@
 import "../styles/topbar.scss";
-import {
-    useNavigate
-} from "react-router-dom"
+//import { useNavigate } from "react-router-dom"
 interface TopBarProps {
     button: boolean
 }
 
 const TopBar: React.FC<TopBarProps> = ({ button }) => {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     return <div className="topBarContainer" >
         {/* <div className="addButton" onClick={() => { button ? navigate("/add-post") : navigate("/") }}>
             {button ? "הוספת זיכרון" : "חזרה"}
