@@ -19,9 +19,7 @@ function App() {
       path: "/add-post",
       element: <AddNewPostPage />,
     },
-  ], {
-    basename: "https://tikvad.github.io/rememberingaryeh"
-  });
+  ]);
 
   return (
     <div>
