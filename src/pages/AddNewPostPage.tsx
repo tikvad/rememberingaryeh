@@ -3,7 +3,7 @@ import TopBar from "../components/TopBar";
 export function AddNewPostPage() {
 
     return <>
-        <TopBar button={false}/>
+        <TopBar />
         <div>Add New Post Page</div>
     </>
 }
